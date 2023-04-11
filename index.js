@@ -13,6 +13,10 @@ app.post('/submit', async (req, res) => {
     res.send(result);
 
 });
+app.get('/feedbacks', async (req, res) => {
+    const result = await feedback.find();
+    res.send(result);
+});
 
 app.listen(port, () => {
     console.log(`Example app listening at http://localhost:${port}`)
